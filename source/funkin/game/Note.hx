@@ -167,6 +167,10 @@ class Note extends FlxSprite
 							animation.addByPrefix('scroll', 'red0');
 							animation.addByPrefix('hold', 'red hold piece');
 							animation.addByPrefix('holdend', 'red hold end');
+						case default: //default case to prevent a crash if somehow there is one
+							animation.addByPrefix('scroll', 'purple0');
+							animation.addByPrefix('hold', 'purple hold piece');
+							animation.addByPrefix('holdend', 'pruple end hold');
 					}
 
 					scale.set(event.noteScale, event.noteScale);
